@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, Sans-serif;
+    margin: 0;
+    background: #f4f7f4;
+    color: #222;
+}
+
+header{
+    background: #008751;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card{
+    background: white;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    border-left: 5px solid #008751;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 1rem auto 3rem;
+    padding: 0 1.5rem;
+}
+
+.timeline > h2 {
+    color: #006b3f;
+    border-bottom: 3px solid #008751;
+    padding-bottom: 0.5rem;
+}
+
+.treaty {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: white;
+    padding: 1rem 1.25rem;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.treaty .year {
+    background: #008751;
+    color: white;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.treaty h3 {
+    margin: 0 0 0.25rem;
+    color: #006b3f;
+}
+
+.treaty p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .grid {
+        padding: 1rem;
+    }
+
+    .timeline {
+        padding: 0 1rem;
+    }
+
+    .treaty {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .treaty .year {
+        align-self: flex-start;
+    }
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
