@@ -70,13 +70,17 @@ page = f"""<!DOCTYPE html>
         <p>ECOWAS member states and Nigeria's place among them</p>
         <p> Total countries listed: {len(countries)}</p>
     </header>
-    <main class="grid">
+    <div class="search-warp">
+        <input type="text" id="search" placeholder="Search a country or capital....">
+    </div>
+        <main class="grid">
         {cards}
     </main>
   <section class="timeline">
         <h2>Key Treaties and Milestones</h2>
         {timeline}
-    </section>
+   </section>
+   <script src="script.js"></script>
 </body>
 </html>
 """
